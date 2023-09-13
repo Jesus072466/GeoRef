@@ -1,10 +1,18 @@
-
-    <h1>proyectos</h1
-    
-    {%if edad >= 18%}
-    <h1>Eres mayor de edad</h1>
-    
-    {% else %}
-    <h1>No eres mayor de edad</h1>
-    
-    {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Proyectos</h1>
+        <h2>Propietario: {{nombre}} </h2>
+        <h2>Edad: {{edad}} </h2>
+        {% if edad >= 17 %}
+        <h2>Eres mayor de edad </h2>
+        {% else %}
+        <h2>Eres menor de edad </h2>
+        {% endif %}
+</body>
+</html>
