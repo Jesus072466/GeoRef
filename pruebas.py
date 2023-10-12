@@ -91,10 +91,6 @@ def index():
     #return "<h1>Index</h1>"
     return render_template('index.html', edad = edad)
 
-@app.route('/mapa/<float:lat>/<float:long>/<string:texto>')
-def mapa(lat, long, texto):
-    return render_template('mapa.html', lat = lat, long = long, texto = texto)
-
 @app.route('/login',methods=['POST'])
 def login():
     data = request.get_json()

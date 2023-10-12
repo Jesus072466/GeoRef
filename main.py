@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import secrets
 import math
 
-app = Flask(__name__)
+app = Flask(_name_)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://chemacruzp:123qweZXC@chemacruzp.mysql.pythonanywhere-services.com:3306/chemacruzp$default'
 db = SQLAlchemy(app)
 
@@ -50,6 +50,10 @@ class Author(db.Model):
     death = db.Column(db.String(250))
     description = db.Column(db.String(250))
     img = db.Column(db.String(250))
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == "_main_":
     with app.app_context:
